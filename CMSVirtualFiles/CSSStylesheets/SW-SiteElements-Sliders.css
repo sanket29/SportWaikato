@@ -1,0 +1,161 @@
+﻿/*
+## Sliders
+
+All sliders and banner styles
+*/
+
+/*
+## Banner
+
+```
+<div class="banner">
+	<img src="http://placehold.it/1200x510" class="banner-image" />
+	<div class="banner-caption-overlay">
+		<div class="banner-caption-wrapper">
+			<div class="banner-caption">
+				<h1>Main Intro Title goes here</h1>
+				<h3>Sub-heading goes here</h3>
+			</div>
+		</div>
+	</div>
+</div>
+```
+*/
+
+.banner {
+	height:510px;
+	position:relative;
+	overflow:hidden;
+}
+
+.banner-image,
+.js-banner-image {
+	display:block;
+	width:100%;
+}
+
+.banner-caption-overlay {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.banner-caption-wrapper {
+	position:relative;
+	height:100%;
+	width:940px;
+	max-width:100%;
+	margin:0 auto;
+	padding:0 10px;
+}
+
+.banner-caption {
+	position:absolute;
+	color:white;
+	max-width:415px;
+	bottom:115px;
+}
+
+.banner-caption h1 {
+	margin-bottom:10px;
+}
+
+.banner-caption h3 {
+	font-weight:normal;
+}
+
+.banner .bttrlazyloading-wrapper {
+	width:100%;
+}
+
+
+@media ( max-width:1200px ) {
+
+	.banner-image {
+		position:absolute;
+		left:50%;
+		margin-left:-600px;
+		display:block;
+		max-width:none;
+		width:auto;
+	}
+}
+
+
+
+.slider:before,
+.slider:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.IE7 .slider { zoom:1; }
+
+.slider {
+	margin:0; 
+	padding:0;
+	position:relative;
+}
+
+.slider .slides {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.slider .slides > li { 
+	display:none; 
+	-webkit-backface-visibility: hidden;
+}
+
+.slider .slides > li:first-child {
+	display:block;
+}
+
+
+.slider-direction-nav {
+	height:0;
+	margin:0;
+	padding:0;
+}
+
+.slider-direction-nav a  {
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	top:50%;
+	margin-top:-35px;
+	z-index:4;
+	cursor:pointer;
+	color:white;
+}
+
+.slider-direction-nav a:before  {
+	font-family:"icomoon";
+	font-size:50px;
+	display:inline-block;
+}
+
+.slider-direction-nav .slider-prev {
+	left:20px;
+}
+
+.slider-direction-nav .slider-prev:before {
+	content:"\e609";
+}
+
+.slider-direction-nav .slider-next {
+	right:20px;
+}
+
+.slider-direction-nav .slider-next:before {
+	content:"\e606";
+}
+
+.slider-direction-nav .slider-disabled { 
+	opacity:0; 
+	cursor:default;
+}

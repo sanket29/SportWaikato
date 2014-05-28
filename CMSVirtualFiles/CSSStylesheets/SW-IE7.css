@@ -1,0 +1,33 @@
+﻿.login-and-search .form-control input {
+	height:auto;
+	margin-top:-4px;
+	width:118px;
+}
+
+.login-and-search .input-group-button {
+	float:left;
+}
+
+.login-and-search .button-login {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+
+.main-logo {
+	display:inline;
+	zoom:1;
+	float:left;
+}
+
+.nav-toplevel-link .icon {
+	min-height:10px;
+}
+
+.search-form--on-banner {
+	max-width:245px;
+}
+
+.section-title a {
+	margin-top:-25px;
+}

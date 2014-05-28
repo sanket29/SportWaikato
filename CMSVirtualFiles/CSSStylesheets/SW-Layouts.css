@@ -1,0 +1,213 @@
+﻿/*
+## Content Section
+
+content section is a block to provide consistent vertical spacing of ```30px``` or ```60px``` between various sections of the page
+
+```
+<div class="content-section">
+	<p>this has 30px margin top and bottom</p>
+	<p class="fixie"></p>
+	<p class="fixie"></p>
+</div>
+```
+*/
+
+.content-section {
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+/*
+use ```content-section--large``` for ```60px``` vertical margin
+
+```
+<div class="content-section content-section--large">
+	<p>this has 60px margin top and bottom</p>
+</div>
+```
+*/
+.content-section--large {
+	margin-top:60px;
+	margin-bottom:60px;
+}
+
+/*
+use ```content-section--collapsed-top``` to remove top margin.
+
+```
+<div class="content-section content-section--collapsed-top">
+	<p>this has no margin top</p>
+	<p class="fixie"></p>
+	<p class="fixie"></p>
+</div>
+```
+*/
+.content-section--collapsed-top { margin-top:0; }
+
+/*
+use ```content-section--collapsed-bottom``` to remove bottom margin.
+
+```
+<div class="content-section content-section--collapsed-bottom">
+	<p>this has no margin bottom</p>
+	<p class="fixie"></p>
+	<p class="fixie"></p>
+</div>
+```
+*/
+.content-section--collapsed-bottom { margin-bottom:0; }
+
+
+/*
+## Two columns content
+
+top split content into 2 columns
+
+```
+<div class="two-columns-content">
+	<p class="fixie"></p>
+	<p class="fixie"></p>
+</div>
+```
+*/
+.two-columns-content {
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+}
+
+.two-columns-content p {
+	display:inline-block;
+}
+
+
+
+.slider-and-search-form {
+	margin-top:-50px;
+	position:relative;
+	overflow:hidden;
+}
+
+
+@media (max-width:800px) {
+	.slider-and-search-form {
+		overflow:visible;
+	}
+}
+
+
+.homepage-intro {
+	margin-top:30px;
+}
+
+@media (max-width:800px) {
+	.homepage-intro.two-columns-content {
+		-moz-column-count: 1;
+		-moz-column-gap: 0;
+		-webkit-column-count: 1;
+		-webkit-column-gap: 0;
+
+		margin-right:340px;
+	}
+}
+
+@media (max-width:480px) {
+	.homepage-intro.two-columns-content {
+		margin-right:auto;
+	}
+}
+
+
+.call-to-action-section {
+	background: /*url("/sw/images/grey-swirl.png") no-repeat center top*/ ;
+}
+
+
+/*delayed image general styles*/
+
+.delayed-image {
+	background:#eee;
+	position:relative;
+	height:0;
+	overflow:hidden;
+}
+
+.image-loaded {
+	opacity:1;
+	-webkit-transition:opacity 0.5s ease;
+	   -moz-transition:opacity 0.5s ease;
+	     -o-transition:opacity 0.5s ease;
+	        transition:opacity 0.5s ease;
+}
+
+.image-ready {
+	opacity:0;
+}
+
+
+/*bttrlazyloading plugin styles*/
+.bttrlazyloading-wrapper {
+    background-repeat: no-repeat;
+    background-position: center;
+	display: table;
+}
+
+.bttrlazyloading-clone,
+.bttrlazyloading,
+.image {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.animated {
+	-webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-ms-animation-duration:1s;
+	-o-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.animated.hinge {
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-ms-animation-duration:1s;
+	-o-animation-duration:1s;
+	animation-duration:1s;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+}

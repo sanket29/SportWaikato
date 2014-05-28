@@ -1,0 +1,450 @@
+﻿/*
+## Type
+
+*/
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Lato Black'), local('Lato-Black'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/BVtM30trf7q_jfqYeHfjtA.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Lato Italic'), local('Lato-Italic'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/oUan5VrEkpzIazlUe5ieaA.woff) format('woff');
+}
+
+html,
+body {
+	font-size: 14px;
+	color:#333;
+}
+
+
+body {
+	font-family: "Lato", "sans-serif", sans-serif, arial;
+	font-weight: normal;
+	font-style: normal;
+}
+
+div, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+## Default link and body copy
+	
+```
+<p><a href="#">Placeat</a> dreamcatcher <em>letterpress</em> helvetica <strong>ut vinyl</strong> voluptate <small>street-art</small>. Fixie etsy gentrify art totally art before. Gluten reprehenderit kale art Pinterest.</p>
+<p class="fixie"></p>
+<p class="fixie"></p>
+```
+
+*/
+
+a {
+	color:#ee3126;
+	text-decoration:none;
+	line-height:inherit;
+	font-family:inherit;
+	font-weight:inherit;  
+	font-style:italic;
+}
+
+a:focus,
+a:hover {
+	text-decoration:none;
+}
+
+a img {
+	border: none;
+}
+
+p {
+	font-family: inherit;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.4;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+
+/*
+## Unordered List
+```
+<ul>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+</ul>
+```
+*/
+
+ul {
+	padding-left:20px;
+	margin-top:1em;
+	margin-bottom:1em;
+	line-height:1.4;
+}
+
+/*
+## Unstyled List
+
+```
+<ul class="unstyled">
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+	<li class="fixie"></li>
+</ul>
+```
+*/
+
+ul.unstyled {
+	list-style:none;
+	padding-left:0;
+	margin-top:auto;
+	margin-bottom:auto;
+	line-height:normal;
+}
+
+/*
+## Unstyled Anchor
+
+```
+<a href="#" class="unstyled-link">this is a link</a>
+```
+*/
+
+.unstyled-link,
+.unstyled-link:focus
+.unstyled-link:hover {
+	text-decoration:none;
+	color:inherit;
+	line-height:normal;
+	background:none;
+	border-radius:0;
+	box-shadow:none;
+	border:none;
+	background:none;
+	font-weight:normal;
+	font-style:normal;
+}
+
+.unstyled-link:before,
+.unstyled-link:after {
+	content:none;
+}
+
+/*
+## Headings
+
+use ```alternate``` for lighter version
+
+```
+<h1>Heading 1 - 42px <small>Small Text</small></h1>
+<h2>Heading 2 - 30px <small>Small Text</small></h2>
+<h3>Heading 3 - 18px <small>Small Text</small></h3>
+<h4>Heading 4 - 14px <small>Small Text</small></h4>
+<h5>Heading 5 - 12px <small>Small Text</small></h5>
+<h6>Heading 6 - 10px <small>Small Text</small></h6>
+
+<h1 class="alternate">Heading 1 - 42px <small>Small Text</small></h1>
+<h2 class="alternate">Heading 2 - 30px <small>Small Text</small></h2>
+<h3 class="alternate">Heading 3 - 18px <small>Small Text</small></h3>
+<h4 class="alternate">Heading 4 - 14px <small>Small Text</small></h4>
+<h5 class="alternate">Heading 5 - 12px <small>Small Text</small></h5>
+<h6 class="alternate">Heading 6 - 10px <small>Small Text</small></h6>
+```
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lato", "sans-serif";
+	font-style: normal;
+	font-weight:bold;
+	text-rendering: optimizeLegibility;
+	line-height: 1.2;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	font-size: 60%;
+	color: inherit;
+	line-height: 0;
+}
+
+h1.alternate,
+h2.alternate,
+h3.alternate,
+h4.alternate,
+h5.alternate,
+h6.alternate {
+	font-weight:normal;
+}
+
+h1 { 
+	font-size:3.2em; 
+	text-transform:uppercase;
+}
+
+h2 { 
+	font-size:2.15em; 
+	text-transform:uppercase;
+}
+
+h3 { font-size:1.8em; }
+
+h4 { font-size:1.3em; }
+
+h5 { font-size:1em; }
+
+h6 { font-size:0.71em; }
+
+/*
+## Seperators
+
+```
+<hr />
+```
+*/
+
+hr {
+	border: solid #333;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 20px auto;
+	height: 0;
+
+	width:960px;
+	max-width:100%;
+}
+
+
+::-webkit-input-placeholder {
+   color: #6F6F6F;
+   opacity:1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #6F6F6F;
+    opacity:1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #6F6F6F;
+   opacity:1;
+}
+
+:-ms-input-placeholder {  
+   color: #6F6F6F;
+   opacity:1;
+}
+
+em,
+i {
+	font-style: italic;
+	line-height: inherit;
+}
+
+strong,
+b {
+	font-weight: bold;
+	line-height: inherit;
+}
+
+small {
+	font-size: 60%;
+	line-height: inherit;
+}
+
+.print-only {
+	display: none !important;
+}
+
+
+/*
+## Section Title
+
+with a default margin of 30px
+
+```
+<h2 class="section-title">Title <a href="#">See All <span class="icon-right"></span></a></h2>
+```
+*/
+
+.section-title {
+	color:white;
+	background:#fed103;
+	padding:4px 40px 5px 15px;
+	overflow:hidden;
+	position:relative;
+	max-width:750px;
+
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+/*
+use ```.section-title--col-inner``` to have horizontal spacing.
+
+```
+<h2 class="section-title section-title--col-inner">Title <a href="#">See All <span class="icon-right"></span></a></h2>
+```
+*/
+.section-title--col-inner {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+
+/*
+section title as first child has no top margin, but it can also be specified by using ```section-title--collapsed-top```
+
+```
+<h2 class="section-title section-title--collapsed-top">Title <a href="#">See All <span class="icon-right"></span></a></h2>
+```
+*/
+.section-title:first-child,
+.section-title--collpased-top {
+	margin-top:0;
+}
+
+/*
+section title as last child has no bottom margin, which can also be specified by using ```section-title--collapsed-bottom```
+
+```
+<h2 class="section-title section-title--collapsed-bottom">Title <a href="#">See All <span class="icon-right"></span></a></h2>
+```
+*/
+.section-title:last-child,
+.section-title--collapsed-bottom {
+	margin-bottom:0;
+}
+
+.section-title--collapsed {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.section-title:after {
+	content:"";
+	width:0;
+	height:0;
+	border-width:23px 15px;
+	border-style:solid;
+	border-color:#fed103 white #fed103  #fed103;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.section-title a {
+	float:right;
+	text-transform:uppercase;
+	font-size:13px;
+	color:white;
+	font-style:normal;
+	margin-top:10px;
+}
+
+.section-title a span {
+	margin-left:10px;
+	font-size:9px;
+}
+
+@media print {
+	* {
+	background: transparent !important;
+	color: #000 !important;
+	/* Black prints faster: h5bp.com/s */
+	box-shadow: none !important;
+	text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+	text-decoration: underline;
+	}
+
+	a[href]:after {
+	content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+	content: " (" attr(title) ")";
+	}
+
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+	content: "";
+	}
+
+	pre,
+	blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+	}
+
+	thead {
+	display: table-header-group;
+	/* h5bp.com/t */
+	}
+
+	tr,
+	img {
+	page-break-inside: avoid;
+	}
+
+	img {
+	max-width: 100% !important;
+	}
+
+	@page {
+	margin: 0.5cm;
+	}
+
+	p,
+	h2,
+	h3 {
+	orphans: 3;
+	widows: 3;
+	}
+
+	h2,
+	h3 {
+	page-break-after: avoid;
+	}
+
+	.hide-on-print {
+	display: none !important;
+	}
+
+	.print-only {
+	display: block !important;
+	}
+
+	.hide-for-print {
+	display: none !important;
+	}
+
+	.show-for-print {
+	display: inherit !important;
+	}
+}

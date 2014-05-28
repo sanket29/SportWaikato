@@ -1,0 +1,96 @@
+﻿/*
+## Search Form
+
+being used on home page banner
+
+```
+```
+*/
+
+.search-form {
+	/*padding:30px;*/
+	/*background:#58595b;*/
+	background:url("/sw/images/search-form-bg.png") repeat-y;
+	color:#cccccc;
+	width:251px;
+	padding:20px 45px 30px;
+}
+
+.search-form-header-swirl {
+	position:absolute;
+	top:-57px;
+	left:0;
+	max-width:none;
+}
+
+.search-form h2 { color:#ffd20c; }
+
+.search-form .icon {
+	vertical-align:middle;
+	margin-right:10px;
+	font-size:1.6em;
+}
+
+.search-form-container { margin-top:35px; }
+
+.search-form-type-selection {
+	text-align:justify;
+	max-height:20px;
+}
+
+.search-form-type-selection label { 
+	display:inline-block; 
+	padding-top:1px;
+}
+
+.search-form-type-selection:after {
+	content:"";
+	font-size:0;
+	line-height:0;
+	width:100%;
+	display:inline-block;
+}
+
+
+.search-form-type-selection input {
+	margin:-2px 4px 0 0;
+	vertical-align:middle;
+}
+
+
+.search-form-type { margin-bottom:30px; }
+
+.search-form-type-section { display:none; }
+
+.search-form-type-section:first-child { display:block; }
+
+.search-form-type select,
+.search-form-type .chosen-container { margin-bottom:10px; }
+
+.search-form-submit { text-align:center; }
+
+
+.search-form--on-banner {
+	position:absolute;
+	right:-4px;
+	bottom:0;
+	z-index:3;
+}
+
+@media (max-width:800px) {
+	.search-form--on-banner {
+		right:0;
+		bottom:-240px;
+	}
+}
+
+@media (max-width:480px) {
+	.search-form--on-banner {
+		position:relative;
+		bottom:0;
+		width:auto;
+		background:#323232;
+	}
+
+	.search-form-header-swirl { display:none; }
+}

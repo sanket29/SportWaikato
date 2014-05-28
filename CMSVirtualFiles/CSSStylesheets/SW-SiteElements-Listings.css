@@ -1,0 +1,236 @@
+/*
+## Listings
+
+All listing modules
+
+## List Item
+
+use ```.list-item--alternate``` to shift image towards left
+
+```
+<div class="list-item">
+	<div class="list-item-head-wrapper">
+		<a href="#" class="list-item-head">
+			<span class="delayed-image list-item-image" data-src="http://placehold.it/480x285">
+				<img class="hidden" src="http://placehold.it/480x285" />
+			</span>
+			<span class="list-item-image-icon icon-right"></span>
+		</a>
+	</div>
+	<div class="list-item-body-wrapper">
+		<div class="list-item-body">
+			<h3 class="list-item-title"><a href="#">Part Time Assistant Swim Coach</a></h3>
+			<p class="fixie"></p>
+			<p><a href="#">Click to read more</a></p>
+		</div>
+	</div>
+</div>
+```
+*/
+
+.list-item {
+	max-width:350px;
+	margin-bottom:20px;
+}
+
+.list-item-head {
+	display:block;
+	margin-bottom:10px;
+	position:relative;
+}
+
+.list-item-image {
+	display:block;
+	padding-bottom:59%;
+}
+
+.list-item-image-icon {
+	padding:15px;
+	color:#333;
+	background:#fed103;
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+
+.list-item-title,
+.list-item p {
+	margin:10px 0;
+}
+
+.list-item-title:first-child,
+.list-item p:first-child {
+	margin-top:0;
+}
+
+.list-item-title:last-child,
+.list-item p:last-child {
+	margin-bottom:0;
+}
+
+.list-item-title a {
+	color:#333;
+	font-style:normal;
+}
+
+.list-item p a {
+	color:#575757;
+}
+
+
+/*
+## List Item - alternate
+
+```
+<div class="list-item list-item--alternate">
+	<div class="list-item-head-wrapper">
+		<a href="#" class="list-item-head">
+			<span class="delayed-image list-item-image" data-src="http://placehold.it/480x285">
+				<img class="hidden" src="http://placehold.it/480x285" />
+			</span>
+			<span class="list-item-image-icon icon-right"></span>
+		</a>
+	</div>
+	<div class="list-item-body-wrapper">
+		<div class="list-item-body">
+			<h4 class="list-item-title"><a href="#">Part Time Assistant Swim Coach</a></h4>
+			<p class="fixie"></p>
+			<p><a href="#">Click to read more</a></p>
+		</div>
+	</div>
+</div>
+```
+*/
+
+.list-item--alternate {
+	max-width:545px;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+
+.list-item--alternate:last-child {
+	margin-bottom:0;
+}
+
+.list-item--alternate .list-item-head-wrapper,
+.list-item--alternate .list-item-body-wrapper {
+	float:left;
+	width:50%;
+}
+
+.list-item--alternate .list-item-head {
+	display:block;
+	margin-right:5px;
+	margin-bottom:0;
+}
+
+.list-item--alternate .list-item-body {
+	margin-left:5px;
+}
+
+.list-item--alternate .list-item-image {
+	padding-bottom:78%;
+}
+
+/*
+## Call to action item
+
+```
+<div class="cta-item">
+	<a href="#" class="cta-item-image">
+		<span class="delayed-image" data-src="http://placehold.it/140x140">
+			<img class="hidden" src="http://placehold.it/140x140" />
+		</span>
+		<span class="overlay"></span>
+		<span class="icon icon-flag"></span>
+	</a>
+	<h2>Regional Leadership</h2>
+	<div class="cta-item-body">
+		<p class="fixie"></p>
+	</div>
+	<p><a href="#">Click to read more</a></p>
+</div>
+```
+*/
+
+.cta-item {
+	max-width:300px;
+	text-align:center;
+}
+
+.cta-item h2 {
+	font-size:1.5em;
+	color:#fed103;
+}
+
+.cta-item h2,
+.cta-item p {
+	margin:10px 0;
+}
+
+.cta-item p a {
+	color:#575757;
+}
+
+.cta-item-image {
+	display:block;
+	position:relative;
+	border-radius:50%;
+	overflow:hidden;
+	width:140px;
+	max-width:100%;
+	margin:0 auto 50px;
+}
+
+.cta-item-image .delayed-image {
+	padding-bottom:100%;
+	display:block;
+}
+
+.cta-item-image .icon {
+	display:block;
+	color:white;
+	font-size:3em;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-21px;
+	margin-left:-21px;
+}
+
+.cta-item-image .overlay {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:block;
+	opacity:0;
+	transition:.3s ease;
+	
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	backface-visibility:hidden;
+	
+	border-radius:50%;
+}
+
+.cta-item-image:hover .overlay {
+	opacity:1;
+	background:#fed103;
+}
+
+
+@media (max-width:500px) {
+	.cta-item h2 {
+		font-size:1.3em;
+	}
+}
+
+@media (max-width:480px) {
+	.cta-item { margin-bottom:40px; }
+	
+	.cta-item-body { display:none; }
+
+	.cta-item-image { margin-bottom:15px; }
+}

@@ -1,0 +1,922 @@
+﻿/*
+## Form Controls
+
+All form controls require a parent with class ```.form-control```
+
+## Inputs
+
+```
+<p class="form-control">
+	<label for="textBox">Text Box</label>
+	<input id="textBox" name="textBox" type="text" placeholder="Some placeholder text" />
+</p>
+
+<p class="form-control form-control--success">
+	<label for="textBoxSuccess">Text Box</label>
+	<input id="textBoxSuccess" name="textBoxSuccess" type="text" placeholder="Placeholder text - success" />
+	<span class="form-control-info fixie"></span>
+</p>
+
+<p class="form-control form-control--warning">
+	<label for="textBoxWarn">Text Box</label>
+	<input id="textBoxWarn" name="textBoxWarn" type="text" placeholder="Placeholder text - warning" />
+	<span class="form-control-info fixie"></span>
+</p>
+
+<p class="form-control form-control--error">
+	<label for="textBoxError">Text Box</label>
+	<input id="textBoxError" name="textBoxError" type="text" placeholder="Placeholder text - error" />
+	<span class="form-control-info fixie"></span>
+</p>
+```
+*/
+
+/*
+## Input - Alternate
+
+```
+<div style="padding:1px 20px; background:#F0F0F0">
+	<p class="form-control form-control--alternate">
+		<label for="textBoxSuccess">Text Box</label>
+		<input id="textBoxSuccess" name="textBoxSuccess" type="text" placeholder="Placeholder text - success" />
+	</p>
+</div>
+```
+*/
+
+.form-control ::-webkit-input-placeholder {
+	color:#999999;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control :-moz-placeholder { /* Firefox 18- */
+	color:#999999;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control ::-moz-placeholder {  /* Firefox 19+ */
+	color:#999999;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control--alternate :-ms-input-placeholder {  
+	color:#BFBFBF;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control--alternate ::-webkit-input-placeholder {
+	color:#BFBFBF;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control--alternate :-moz-placeholder { /* Firefox 18- */
+	color:#BFBFBF;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control--alternate ::-moz-placeholder {  /* Firefox 19+ */
+	color:#BFBFBF;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control--alternate :-ms-input-placeholder {  
+	color:#BFBFBF;
+	font-style:italic;
+	font-family:"Lato";
+}
+
+.form-control label {
+	cursor:pointer;
+}
+
+.form-control input[type="text"],
+.form-control input[type="password"],
+.form-control input[type="date"],
+.form-control input[type="datetime"],
+.form-control input[type="datetime-local"],
+.form-control input[type="month"],
+.form-control input[type="week"],
+.form-control input[type="email"],
+.form-control input[type="number"],
+.form-control input[type="search"],
+.form-control input[type="tel"],
+.form-control input[type="time"],
+.form-control input[type="url"],
+.form-control textarea {
+	outline:none;
+	padding:13px 15px;
+	vertical-align: middle;
+	background-color: #F0F0F0;
+	border: 1px solid transparent;
+	transition: border-color ease-in-out .15s;
+
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	line-height:16px;
+
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+}
+
+.form-control--flat input[type="text"],
+.form-control--flat input[type="password"],
+.form-control--flat input[type="date"],
+.form-control--flat input[type="datetime"],
+.form-control--flat input[type="datetime-local"],
+.form-control--flat input[type="month"],
+.form-control--flat input[type="week"],
+.form-control--flat input[type="email"],
+.form-control--flat input[type="number"],
+.form-control--flat input[type="search"],
+.form-control--flat input[type="tel"],
+.form-control--flat input[type="time"],
+.form-control--flat input[type="url"],
+.form-control--flat textarea {
+	border-radius:2px;
+	border:1px solid #E5E5E5;
+}
+
+.form-control--alternate input[type="text"],
+.form-control--alternate input[type="password"],
+.form-control--alternate input[type="date"],
+.form-control--alternate input[type="datetime"],
+.form-control--alternate input[type="datetime-local"],
+.form-control--alternate input[type="month"],
+.form-control--alternate input[type="week"],
+.form-control--alternate input[type="email"],
+.form-control--alternate input[type="number"],
+.form-control--alternate input[type="search"],
+.form-control--alternate input[type="tel"],
+.form-control--alternate input[type="time"],
+.form-control--alternate input[type="url"],
+.form-control--alternate textarea {
+	background:white;
+}
+
+.form-control input[type="text"]:focus,
+.form-control input[type="password"]:focus,
+.form-control input[type="date"]:focus,
+.form-control input[type="datetime"]:focus,
+.form-control input[type="datetime-local"]:focus,
+.form-control input[type="month"]:focus,
+.form-control input[type="week"]:focus,
+.form-control input[type="email"]:focus,
+.form-control input[type="number"]:focus,
+.form-control input[type="search"]:focus,
+.form-control input[type="tel"]:focus,
+.form-control input[type="time"]:focus,
+.form-control input[type="url"]:focus,
+.form-control textarea:focus {
+	border:1px solid #fed103;
+}
+
+.form-control--success input[type="text"]:focus,
+.form-control--success input[type="password"]:focus,
+.form-control--success input[type="date"]:focus,
+.form-control--success input[type="datetime"]:focus,
+.form-control--success input[type="datetime-local"]:focus,
+.form-control--success input[type="month"]:focus,
+.form-control--success input[type="week"]:focus,
+.form-control--success input[type="email"]:focus,
+.form-control--success input[type="number"]:focus,
+.form-control--success input[type="search"]:focus,
+.form-control--success input[type="tel"]:focus,
+.form-control--success input[type="time"]:focus,
+.form-control--success input[type="url"]:focus,
+.form-control--success textarea:focus {
+	border-color:#3C763D;
+}
+
+.form-control--warning input[type="text"]:focus,
+.form-control--warning input[type="password"]:focus,
+.form-control--warning input[type="date"]:focus,
+.form-control--warning input[type="datetime"]:focus,
+.form-control--warning input[type="datetime-local"]:focus,
+.form-control--warning input[type="month"]:focus,
+.form-control--warning input[type="week"]:focus,
+.form-control--warning input[type="email"]:focus,
+.form-control--warning input[type="number"]:focus,
+.form-control--warning input[type="search"]:focus,
+.form-control--warning input[type="tel"]:focus,
+.form-control--warning input[type="time"]:focus,
+.form-control--warning input[type="url"]:focus,
+.form-control--warning textarea:focus {
+	border-color:#8A6D3B;
+}
+
+.form-control--error input[type="text"]:focus,
+.form-control--error input[type="password"]:focus,
+.form-control--error input[type="date"]:focus,
+.form-control--error input[type="datetime"]:focus,
+.form-control--error input[type="datetime-local"]:focus,
+.form-control--error input[type="month"]:focus,
+.form-control--error input[type="week"]:focus,
+.form-control--error input[type="email"]:focus,
+.form-control--error input[type="number"]:focus,
+.form-control--error input[type="search"]:focus,
+.form-control--error input[type="tel"]:focus,
+.form-control--error input[type="time"]:focus,
+.form-control--error input[type="url"]:focus,
+.form-control--error textarea:focus {
+	border-color:#A94442;
+}
+
+.form-control-info,
+label.error {
+	padding:2px 10px;
+	border-radius:4px;
+	border:1px solid transparent;
+	display:inline-block;
+	font-size:0.9em;
+}
+
+.form-control--success .form-control-info {
+	background:#DFF0D8;
+	border-color:#D6E9C6;
+	color:#3C763D;
+}
+
+.form-control--warning .form-control-info {
+	background:#FCF8E3;
+	border-color:#FAEBCC;
+	color:#8A6D3B;
+}
+
+.form-control--error .form-control-info,
+label.error {
+	background:#F2DEDE;
+	border-color:#EBCCD1;
+	color:#A94442;
+}
+
+
+/*
+## Form Element - Type Ahead
+
+*/
+
+.form-control--typeahead {
+	font-style:italic;
+}
+
+.form-control--typeahead .twitter-typeahead {
+	display:block;
+	width:100%;
+}
+
+.form-control--typeahead .tt-dropdown-menu {
+	background:#333333;
+	color:#BFBFBF;
+	width:100%;
+	padding:5px 0;
+	max-height:150px;
+	overflow-y:auto;
+}
+
+.form-control--typeahead .tt-suggestions {
+	display:block;
+}
+
+.form-control--typeahead .tt-suggestion {
+	cursor:pointer;
+	padding:5px 10px;
+	font-weight:normal;
+	line-height:normal;
+	border-bottom:1px solid #BFBFBF;
+}
+
+.form-control--typeahead .tt-suggestion:last-child {
+	border-bottom:none;
+}
+
+.form-control--typeahead .tt-suggestion p {
+	margin:0;
+}
+
+.form-control--typeahead .tt-suggestion strong {
+	font-weight:normal;
+	color:#EE7321;
+}
+
+.form-control--typeahead .tt-suggestion.tt-cursor {
+	background-color:#666;
+} 
+
+/*
+## Dropdown
+
+```
+<p class="form-control">
+	<label for="dropdown">Dropdown</label>
+	<select id="dropdown" name="dropdown">
+		<option value="1">Some option</option>
+		<option value="1">Some option</option>
+		<option value="1">Some option</option>
+		<option value="1">Some option</option>
+	</select>
+</p>
+```
+*/
+
+/*
+## Textarea
+
+```
+<p class="form-control">
+	<label for="textarea">Textarea</label>
+	<textarea name="textarea" id="textarea"></textarea>
+</p>
+```
+*/
+
+/*
+## Input Group
+
+```
+<div class="input-group">
+	<span class="input-group-button">
+		<a href="#" class="button button--primary">Go</a>
+	</span>
+	<div class="form-control">
+		<input type="text" placeholder="Placeholder text" />
+	</div>
+</div>
+<br />
+<div class="input-group">
+	<div class="form-control">
+		<input type="text" placeholder="Placeholder text" />
+	</div>
+	<span class="input-group-button">
+		<a href="#" class="button button--primary">Go</a>
+	</span>
+</div>
+```
+*/
+
+/*
+## Input Group - Alternate
+
+```
+<div style="padding:20px; background:#F0F0F0">
+	<div class="input-group">
+		<span class="input-group-button">
+			<a href="#" class="button button--primary">Submit</a>
+		</span>
+		<div class="form-control form-control--alternate">
+			<input type="text" placeholder="Placeholder text" />
+		</div>
+	</div>
+	<br />
+	<div class="input-group">
+		<div class="form-control form-control--alternate">
+			<input type="text" placeholder="Placeholder text" />
+		</div>
+		<span class="input-group-button">
+			<a href="#" class="button button--primary">Submit</a>
+		</span>
+	</div>
+</div>
+```
+*/
+
+.input-group {
+	display:table;
+}
+
+.input-group .input-group-button,
+.input-group .form-control {
+	display:table-cell;
+}
+
+.input-group .input-group-button {
+	position:relative;
+	white-space:nowrap;
+	vertical-align:middle;
+}
+
+.input-group .form-control {
+	position:relative;
+	float:left;
+	width:100%;
+	z-index:1;
+}
+
+.input-group .form-control input {
+	height:43px;
+}
+
+.input-group-button .button:after {
+	content:none;
+}
+
+.input-group-button:first-child > .button {
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+	margin-right:-2px;
+}
+
+.input-group-button:last-child > .button {
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	margin-left:-2px;
+}
+
+
+/*
+## Submit Button
+
+```
+<div class="form-control">
+	<input type="submit" class="submit" class="button-submit" />
+</div>
+```
+*/
+
+.form-control input[type="submit"] {
+	color:black;
+	font-weight:bold;
+	font-size:1em;
+	text-align:center;
+	background:#fed103;
+	border:0;
+	padding:13px 15px;
+	cursor:pointer;
+	text-transform:uppercase;
+	text-align:center;
+	max-width:100%;
+
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+}
+
+.form-control input[type="submit"]:hover {
+	background:#fedf4e;
+}
+
+
+select.chosen-select { 
+	opacity:0; 
+	height:37px; 
+	width:100%;
+}
+
+.chosen-container {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 13px;
+	zoom: 1;
+	*display: inline;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.chosen-container .chosen-drop {
+	position: absolute;
+	top: 100%;
+	left: -9999px;
+	z-index: 1010;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #fed103;
+	border-top: 0;
+	background: #404040;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+.chosen-container.chosen-with-drop .chosen-drop {
+	left: 0;
+}
+
+.chosen-container a {
+	cursor: pointer;
+	font-style:normal;
+}
+
+
+.chosen-container-single .chosen-single {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	padding: 0 0 0 8px;
+	
+	border:1px solid transparent;
+	background-color: #f0f0f0;
+	background-clip: padding-box;
+	box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+	color: #444;
+	text-decoration: none;
+	white-space: nowrap;
+	height: 37px;
+	line-height: 37px;
+}
+
+.chosen-container-single .chosen-default {
+	color: #999;
+}
+
+.chosen-container-single .chosen-single span {
+	display: block;
+	overflow: hidden;
+	margin-right: 26px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-style:italic;
+	color:#afafaf;
+}
+
+.chosen-container-single .chosen-single-with-deselect span {
+	margin-right: 38px;
+}
+
+.chosen-container-single .chosen-single abbr {
+	position: absolute;
+	top: 6px;
+	right: 26px;
+	display: block;
+	width: 12px;
+	height: 12px;
+	font-size: 1px;
+}
+
+.chosen-container-single .chosen-single abbr:hover {
+	background-position: -42px -10px;
+}
+
+.chosen-container-single.chosen-disabled .chosen-single abbr:hover {
+	background-position: -42px -10px;
+}
+
+.chosen-container-single .chosen-single div {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;	
+}
+
+.chosen-container-single .chosen-single div b {
+	display: block;
+	background:#fed103;
+	padding:19px;
+}
+
+.chosen-container-single .chosen-search {
+	position: relative;
+	z-index: 1010;
+	margin: 0;
+	padding: 3px 4px;
+	white-space: nowrap;
+}
+
+.chosen-container-single .chosen-search input[type="text"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 1px 0;
+	padding: 4px 20px 4px 5px;
+	width: 100%;
+	height: auto;
+	outline: 0;
+	border: 1px solid #aaa;
+	font-size: 1em;
+	font-family: sans-serif;
+	line-height: normal;
+	border-radius: 0;
+}
+
+.chosen-container-single .chosen-drop {
+	margin-top: -1px;
+	background-clip: padding-box;
+}
+
+.chosen-container-single.chosen-container-single-nosearch .chosen-search {
+	position: absolute;
+	left: -9999px;
+}
+
+
+.chosen-container .chosen-results {
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+	max-height: 240px;
+	padding:0;
+	margin:0;
+	list-style:none;
+	-webkit-overflow-scrolling: touch;
+}
+
+.chosen-container .chosen-results li {
+	display: none;
+	margin: 0;
+	padding: 5px 8px;
+	list-style: none;
+	line-height: 27px;
+	-webkit-touch-callout: none;
+	border-top:1px solid #4c4c4c;
+	color:#b7b7b7;
+}
+
+.chosen-container .chosen-results li:first-child { border-top:none; }
+
+.chosen-container .chosen-results li.active-result {
+	display: list-item;
+	cursor: pointer;
+}
+
+.chosen-container .chosen-results li.disabled-result {
+	display: list-item;
+	color: #ccc;
+	cursor: default;
+}
+
+.chosen-container .chosen-results li.highlighted {
+	background-color:#666;
+}
+
+.chosen-container .chosen-results li.no-results {
+	display: list-item;
+	background: #f4f4f4;
+}
+
+.chosen-container .chosen-results li.group-result {
+	display: list-item;
+	font-weight: bold;
+	cursor: default;
+}
+
+.chosen-container .chosen-results li.group-option {
+	padding-left: 15px;
+}
+
+.chosen-container .chosen-results li em {
+	font-style: normal;
+	text-decoration: underline;
+}
+
+
+.chosen-container-multi .chosen-choices {
+	position: relative;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto !important;
+	height: 1%;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+	background-image: -webkit-linear-gradient(#eeeeee 1%, #ffffff 15%);
+	background-image: -moz-linear-gradient(#eeeeee 1%, #ffffff 15%);
+	background-image: -o-linear-gradient(#eeeeee 1%, #ffffff 15%);
+	background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);
+	cursor: text;
+}
+
+.chosen-container-multi .chosen-choices li {
+	float: left;
+	list-style: none;
+}
+
+.chosen-container-multi .chosen-choices li.search-field {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+	margin: 1px 0;
+	padding: 5px;
+	height: 15px;
+	outline: 0;
+	border: 0 !important;
+	background: transparent !important;
+	box-shadow: none;
+	color: #666;
+	font-size: 100%;
+	font-family: sans-serif;
+	line-height: normal;
+	border-radius: 0;
+}
+
+.chosen-container-multi .chosen-choices li.search-field .default {
+	color: #999;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+	position: relative;
+	margin: 3px 0 3px 5px;
+	padding: 3px 20px 3px 5px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	background-color: #e4e4e4;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+	background-image: -webkit-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	background-image: -moz-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	background-image: -o-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	background-clip: padding-box;
+	box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+	color: #333;
+	line-height: 13px;
+	cursor: default;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+	position: absolute;
+	top: 4px;
+	right: 3px;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url('chosen-sprite.png') -42px 1px no-repeat;
+	font-size: 1px;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover {
+	background-position: -42px -10px;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice-disabled {
+	padding-right: 5px;
+	border: 1px solid #ccc;
+	background-color: #e4e4e4;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+	background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+	color: #666;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice-focus {
+	background: #d4d4d4;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice-focus .search-choice-close {
+	background-position: -42px -10px;
+}
+
+.chosen-container-multi .chosen-results {
+	margin: 0;
+	padding: 0;
+}
+
+.chosen-container-multi .chosen-drop .result-selected {
+	display: list-item;
+	color: #ccc;
+	cursor: default;
+}
+
+
+.chosen-container-active .chosen-single {
+	border: 1px solid #fed103;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+	border: 1px solid #fed103;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div {
+	border-left: none;
+	background: transparent;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+	background-position: -18px 2px;
+}
+
+.chosen-container-active .chosen-choices {
+	border: 1px solid #fed103;
+}
+
+.chosen-container-active .chosen-choices li.search-field input[type="text"] {
+	color: #111 !important;
+}
+
+
+.chosen-disabled {
+	opacity: 0.5 !important;
+	cursor: default;
+}
+
+.chosen-disabled .chosen-single {
+	cursor: default;
+}
+
+.chosen-disabled .chosen-choices .search-choice .search-choice-close {
+	cursor: default;
+}
+
+
+.chosen-rtl {
+	text-align: right;
+}
+
+.chosen-rtl .chosen-single {
+	overflow: visible;
+	padding: 0 8px 0 0;
+}
+
+.chosen-rtl .chosen-single span {
+	margin-right: 0;
+	margin-left: 26px;
+	direction: rtl;
+}
+
+.chosen-rtl .chosen-single-with-deselect span {
+	margin-left: 38px;
+}
+
+.chosen-rtl .chosen-single div {
+	right: auto;
+	left: 3px;
+}
+
+.chosen-rtl .chosen-single abbr {
+	right: auto;
+	left: 26px;
+}
+
+.chosen-rtl .chosen-choices li {
+	float: right;
+}
+
+.chosen-rtl .chosen-choices li.search-field input[type="text"] {
+	direction: rtl;
+}
+
+.chosen-rtl .chosen-choices li.search-choice {
+	margin: 3px 5px 3px 0;
+	padding: 3px 5px 3px 19px;
+}
+
+.chosen-rtl .chosen-choices li.search-choice .search-choice-close {
+	right: auto;
+	left: 4px;
+}
+
+.chosen-rtl.chosen-container-single-nosearch .chosen-search,
+.chosen-rtl .chosen-drop {
+	left: 9999px;
+}
+
+.chosen-rtl.chosen-container-single .chosen-results {
+	margin: 0 0 4px 4px;
+	padding: 0 4px 0 0;
+}
+
+.chosen-rtl .chosen-results li.group-option {
+	padding-right: 15px;
+	padding-left: 0;
+}
+
+.chosen-rtl.chosen-container-active.chosen-with-drop .chosen-single div {
+	border-right: none;
+}
+
+.chosen-rtl .chosen-search input[type="text"] {
+	padding: 4px 5px 4px 20px;
+	background: white url('chosen-sprite.png') no-repeat -30px -20px;
+	background: url('chosen-sprite.png') no-repeat -30px -20px;
+	direction: rtl;
+}
+
+.chosen-rtl.chosen-container-single .chosen-single div b {
+	background-position: 6px 2px;
+}
+
+.chosen-rtl.chosen-container-single.chosen-with-drop .chosen-single div b {
+	background-position: -12px 2px;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+	.chosen-rtl .chosen-search input[type="text"],
+	.chosen-container-single .chosen-single abbr,
+	.chosen-container-single .chosen-single div b,
+	.chosen-container-single .chosen-search input[type="text"],
+	.chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+	.chosen-container .chosen-results-scroll-down span,
+	.chosen-container .chosen-results-scroll-up span {
+		background-image: url('chosen-sprite@2x.png') !important;
+		background-size: 52px 37px !important;
+		background-repeat: no-repeat !important;
+	}
+}

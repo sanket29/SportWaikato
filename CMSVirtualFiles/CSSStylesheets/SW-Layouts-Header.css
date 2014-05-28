@@ -1,0 +1,70 @@
+﻿.main-header {
+	background:url("/sw/images/header-border.jpg") repeat-x bottom left #333333;
+	/*max-height:120px;*/
+	max-height:137px;
+	margin-bottom:50px;
+	position:relative;
+	z-index:10;
+}
+
+.main-header-inner {
+	/*background:url("/sw/images/main-header-background.png") no-repeat bottom center;*/
+	background:url("/sw/images/main-header-background.png") no-repeat bottom center;
+	padding:0 10px;
+}
+
+.main-header-container {
+	margin:0 auto;
+	width:960px;
+	max-width:100%;
+	position:relative;
+	padding-top:20px;
+	padding-bottom:30px;
+}
+
+.main-header-container:before,
+.main-header-container:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.IE7 .main-header-container {
+	zoom:1;
+}
+
+
+.main-logo {
+	display:inline-block;
+}
+
+.IE7 .main-logo {
+	zoom:1;
+}
+
+.login-and-search {
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.login-and-search .form-control input {
+	height:37px;
+	width:149px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.login-and-search .button-login {
+	padding:12px 27px;
+}
+
+.login-and-search .button-search {
+	padding:9px 9px 9px 11px;
+	font-size:16px;
+}
+
+
+@media (max-width:900px) {
+	.login-and-search { display:none; }
+}

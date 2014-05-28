@@ -1,0 +1,117 @@
+﻿/*
+## Buttons
+Button states can be altered by using ```.hover``` and ```.active``` classes.
+
+## Button - Default
+
+```
+<p>
+	<a href="" class="button">Default</a>
+	<a href="#" class="button hover">Hover</a>
+	<a href="#" class="button active">Active</a>
+</p>
+
+<p>
+	<a href="" class="button button--arrowed">Default</a>
+	<a href="#" class="button button--arrowed hover">Hover</a>
+	<a href="#" class="button button--arrowed active">Active</a>
+</p>
+```
+*/
+.button {
+	display:inline-block;
+	color:white;
+	font-weight:bold;
+	font-style:normal;
+	font-size:11px;
+	line-height:normal;
+	text-transform:uppercase;
+		
+	background:#333;
+	
+	padding:15px;
+
+	margin:0;
+	cursor:pointer;
+	outline:none;
+
+	transition: .1s ease;
+
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+}
+
+.button.focus,
+.button:focus,
+.button.hover,
+.button:hover {
+	text-decoration:none;
+	background: #4c4c4c;
+}
+
+.button--arrowed:after {
+	font-family:'icomoon';
+	content:"\e606";
+	display:inline-block;
+	margin-left:15px;
+}
+
+/*
+## Button - Primary
+
+```
+<p>
+	<a href="#" class="button button--primary">Default</a>
+	<a href="#" class="button button--primary hover">Hover</a>
+	<a href="#" class="button button--primary active">Active</a>
+</p>
+<p>
+	<a href="#" class="button button--primary button--arrowed">Default</a>
+	<a href="#" class="button button--primary button--arrowed hover">Hover</a>
+	<a href="#" class="button button--primary button--arrowed active">Active</a>
+</p>
+```
+*/
+
+.button--primary {
+	background:#fed103;
+	color:#333;
+}
+
+.button--primary.focus,
+.button--primary:focus,
+.button--primary.hover,
+.button--primary:hover {
+	background:#fedf4e; 
+}
+
+/*
+## Button - Secondary
+
+```
+<p>
+	<a href="#" class="button button--secondary">Default</a>
+	<a href="#" class="button button--secondary hover">Hover</a>
+	<a href="#" class="button button--secondary active">Active</a>
+</p>
+<p>
+	<a href="#" class="button button--secondary button--arrowed">Default</a>
+	<a href="#" class="button button--secondary button--arrowed hover">Hover</a>
+	<a href="#" class="button button--secondary button--arrowed active">Active</a>
+</p>
+```
+*/
+
+.button--secondary {
+	color:white;
+	background:#ee3126; 
+}
+
+.button--secondary:focus,
+.button--secondary.focus,
+.button--secondary:hover,
+.button--secondary.hover {
+	background:#f25a51; 
+}
+
