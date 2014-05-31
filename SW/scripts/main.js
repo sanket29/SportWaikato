@@ -6,12 +6,16 @@ require.config({
 		"bttrlazyloading"	: "lib/bttrlazyloading/bttrlazyloading",
 		"flexslider" 		: "lib/flexslider/flexslider",
 		"validation"		: "lib/validation/validation",
-		"chosen" 			: "lib/chosen/chosen"
+		"chosen" 			: "lib/chosen/chosen",
+		"clndr"				: "lib/clndr/clndr",
+		"moment"			: "lib/moment/moment",
+		"underscore"		: "lib/underscore/underscore"
 	},
 	shim : {
 		"flexslider" 		: ["jquery"],
 		"validation"		: ["jquery"],
-		"bttrlazyloading"	: ["jquery"]
+		"bttrlazyloading"	: ["jquery"],
+		"clndr"				: ["jquery", "moment", "underscore"]
 	}
 });
 
@@ -25,5 +29,6 @@ define([
 	"assets/bttrlazyloading",
 	"assets/flexslider", 
 	"assets/validation", 
-	"assets/chosen"
+	"assets/chosen",
+	"assets/clndr"
 ], function() {});
