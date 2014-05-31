@@ -234,3 +234,73 @@ use ```.list-item--alternate``` to shift image towards left
 
 	.cta-item-image { margin-bottom:15px; }
 }
+
+
+/*
+## Contact Item
+
+The one that has profile image, name, job title, blurb and contact phone and email icons
+*/
+
+
+/*
+## Contact Item - Small
+
+The one with greyish background but without blurb
+*/
+
+
+/*
+## Sidebar Menu Item
+
+Sidebar menu item used pretty much on all pages
+*/
+
+
+/*
+## Feature Item
+
+Mostly used to show features of a directory
+*/
+
+
+/*
+## Meta Item
+
+Mostly used to show meta items of a directory
+*/
+
+
+/*
+## Captioned Item
+
+Album category tile
+*/
+
+
+/*
+## Product Item
+
+Ecommerce product item
+*/
+
+
+/*
+## Resource Item
+
+Used to show resources
+*/
+
+
+/*
+## Accordion Item
+
+Accordion item used on directories
+*/
+
+
+/*
+## Directory Item - Small
+
+Directory list item with title, location and features icons
+*/
