@@ -239,3 +239,4 @@ CMSVirtualFiles/Templates/Shared/*
 
 CMSVirtualFiles/Transformations/*
 
+!SW-Styleguide/
