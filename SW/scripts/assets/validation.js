@@ -5,7 +5,7 @@ define(["jquery", "assets/page", "validation"], function($, page) {
 	var settings = { errorPlacement: handleErrorPlacement, validClass: "valid" };
 
 	// no cookie for ie7
-	if ( !page.isIE7 ) {
+	if ( !page.isIE7 && $form.length ) {
 		//well, setup validation rules based on data-validate attributes
 		setupValidationRules();	
 
