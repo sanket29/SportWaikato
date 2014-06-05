@@ -103,4 +103,5 @@
 	</div>
 </div>
 
+<script type="text/javascript" src="/CMSPages/Webservice.asmx/jsdebug"></script>
 <script data-main="/sw/scripts/main.js" src="/sw/scripts/lib/require/require.js"></script>
