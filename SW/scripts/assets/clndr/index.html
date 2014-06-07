@@ -5,13 +5,159 @@
 		<title>Calendar</title>
 
 		<link href="/CMSPages/GetResource.ashx?stylesheetname=SW-Base" type="text/css" rel="stylesheet" />
-		<link href="/CMSPages/GetResource.ashx?stylesheetname=SW-Type" type="text/css" rel="stylesheet" />
+		<link href="/CMSPages/GetResource.ashx?stylesheetname=SW-Type-Reset" type="text/css" rel="stylesheet" />
 		<link href="/CMSPages/GetResource.ashx?stylesheetname=SW-SiteElements" type="text/css" rel="stylesheet" />
+		<link href="/CMSPages/GetResource.ashx?stylesheetname=SW-Layouts" type="text/css" rel="stylesheet"/>
 	</head>
 	<body>
-		<div class="weekly-calendar">
+
+		<div class="row content-section--large">
+			<div class="span8 weekly-events-section" id="eventsSection">
+
+			</div>
 		</div>
 
+		<div class="row content-section--large">
+			<div class="span8 weekly-events-section">
+				<div class="span6">
+					<div class="col-inner">
+						<div class="weekly-events">
+							<div class="weekly-events-date">
+								<span class="weekly-events-link">
+									<span class="weekly-events-date-day">S</span>
+									<span class="weekly-events-date-text">07</span>
+								</span>
+							</div>
+							<div class="weekly-events-date">
+								<a href="#" class="weekly-events-link weekly-events-link--has-event">
+									<span class="weekly-events-date-day">M</span>
+									<span class="weekly-events-date-text">08</span>
+								</a>
+							</div>
+							<div class="weekly-events-date">
+								<a href="#" class="weekly-events-link weekly-events-link--has-event">
+									<span class="weekly-events-date-day">T</span>
+									<span class="weekly-events-date-text">09</span>
+								</a>
+							</div>
+							<div class="weekly-events-date">
+								<a href="#" class="weekly-events-link">
+									<span class="weekly-events-date-day">W</span>
+									<span class="weekly-events-date-text">10</span>
+								</a>
+							</div>
+							<div class="weekly-events-date">
+								<a href="#" class="weekly-events-link weekly-events-link--has-event">
+									<span class="weekly-events-date-day">T</span>
+									<span class="weekly-events-date-text">11</span>
+								</a>
+							</div>
+							<div class="weekly-events-date">
+								<a href="#" class="weekly-events-link">
+									<span class="weekly-events-date-day">F</span>
+									<span class="weekly-events-date-text">12</span>
+								</a>
+							</div>
+							<div class="weekly-events-date">
+								<a href="#" class="weekly-events-link weekly-events-link--has-event">
+									<span class="weekly-events-date-day">S</span>
+									<span class="weekly-events-date-text">13</span>
+								</a>
+							</div>
+							<div class="weekly-events-all">
+								<a href="#" class="weekly-events-all-link">
+									See all Events
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="span6">
+					<div class="col-inner">
+						<div class="events-overview">
+							<div class="events-overview-date">10</div>
+							<div class="events-overview-title">
+								<h2>Wednesday April 2014</h2>
+								<p>3 Events today</p>
+							</div>
+						</div>
+
+						<div class="event-item">
+							<div class="event-item-content">
+								<h4 class="event-item-title">Event title goes here</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
+							<a href="#" class="event-item-link">See details</a>
+						</div>
+						<div class="event-item">
+							<div class="event-item-content">
+								<h4 class="event-item-title">Event title goes here</h4>
+							</div>
+							<a href="#" class="event-item-link">See details</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script id="weeklyEventDay" type="text/template">
+			<div class="span6">
+				<div class="col-inner">
+					<div class="weekly-events">
+						<% for(var i = extras.currentWeek * 7; i < extras.currentWeek * 7 + 7; i++) { %>
+							<% var dayObject = days[i]; %>
+
+							<div class="weekly-events-date">
+								<% if (dayObject.events.length) { %>
+									<a href="#" id="<%= dayObject.id %>" class="weekly-events-link weekly-events-link--has-event <%= dayObject.classes %>">
+										<span class="weekly-events-date-day"><%= extras.weekName[dayObject.date.weekday()] %></span>
+										<span class="weekly-events-date-text"><%= dayObject.day %></span>
+									</a>
+								<% } else { %>
+									<span id="<%= dayObject.id %>" class="weekly-events-link <%= dayObject.classes %>">
+										<span class="weekly-events-date-day"><%= extras.weekName[dayObject.date.weekday()] %></span>
+										<span class="weekly-events-date-text"><%= dayObject.day %></span>
+									</span>
+								<% } %>
+							</div>
+						<% } %>
+						<div class="weekly-events-all">
+							<a href="#" class="weekly-events-all-link">
+								See all Events
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="col-inner">
+					<% var eventFound = false; %>
+					<% for(var i = extras.currentWeek * 7; i < extras.currentWeek * 7 + 7; i++) { %>
+						<% var dayObject = days[i]; %>
+
+						<% if (dayObject.events.length && !eventFound) { %>
+							<% eventFound = true %>
+							<div class="events-overview">
+								<div class="events-overview-date"><%= dayObject.date.format("DD") %></div>
+								<div class="events-overview-title">
+									<h2><%= dayObject.date.format("dddd MMMM YYYY") %></h2>
+									<p><%= dayObject.events.length %> <%= dayObject.events.length > 1 ? "Events" : "Event" %> today</p>
+								</div>
+							</div>
+							<% _.each(dayObject.events, function(event) { %> 
+									<div class="event-item">
+										<div class="event-item-content">
+											<h4 class="event-item-title"><%= event.Name %></h4>
+										</div>
+										<a href="#" class="event-item-link">See details</a>
+									</div>
+							<% }) %>
+
+						<% } %>
+					<% } %>
+				</div>
+			</div>
+		</script>
 		<script type="text/template" id="clndr_template">
 			<div class="controls">
 				<button class="clndr-previous-button">Prev.</button>
@@ -44,7 +190,7 @@
 		</script>
 
 		<script type="text/javascript" src="/sw/scripts/lib/ajax/ajax.js"></script>
-		<script type="text/javascript" src="/CMSPages/Webservice.asmx/js"></script>
+		<script type="text/javascript" src="/CMSPages/Webservice.asmx/jsdebug"></script>
 
 		<script data-main="/sw/scripts/main.js" src="/sw/scripts/lib/require/require.js"></script>
 	</body>

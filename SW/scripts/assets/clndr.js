@@ -14,15 +14,21 @@
 	function initiateCalendar(data) {
 		eventArray = data;
 
-		clndr = $('.weekly-calendar').clndr({
+		clndr = $('#eventsSection').clndr({
 			events: eventArray,
-			template: $('#clndr_template').html(),
+			template: $('#weeklyEventDay').html(),
 			extras: {
-				currentWeek: Math.floor((((moment().date() + moment().startOf('month').weekday()) - 1) / (weeksInMonth(moment()) * 7)) * weeksInMonth(moment()))
+				currentWeek: Math.floor((((moment().date() + moment().startOf('month').weekday()) - 1) / (weeksInMonth(moment()) * 7)) * weeksInMonth(moment())),
+				weekName: ["S", "M", "T", "W", "T", "F", "S"]
 			},
 			multiDayEvents: {
 				startDate: 'StartDate',
 				endDate: 'EndDate'
+			},
+			clickEvents: {
+				click: function (target) {
+					console.log("clicked on ", target);
+				}
 			},
 			doneRendering: function () {
 
