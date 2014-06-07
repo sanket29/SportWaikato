@@ -8,6 +8,8 @@ using System.Web.Mvc;
 using System.Collections.Generic;
 using CMS.CMSHelper;
 using CMS.DocumentEngine;
+using CMS.GlobalHelper;
+using System.Web.Caching;
 
 /// <summary>
 /// Empty web service template.
@@ -102,6 +104,11 @@ public class WebService : System.Web.Services.WebService
 		public string Name { get; set; }
 		public DateTime StartDate { get; set; }
 		public DateTime EndDate { get; set; }
+
+		public Event()
+		{
+
+		}
 
 		public Event(string name, DateTime startDate, DateTime endDate)
 		{
