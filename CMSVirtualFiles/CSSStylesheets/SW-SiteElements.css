@@ -102,7 +102,7 @@ being used on home page banner
 Weekly calendar section. For the sake of simplicity, extra row has been removed from the example markup below.
 
 ```
-	<div class="weekly-events">
+	<div class="weekly-events style-guide">
 		<div class="weekly-events-date">
 			<span class="weekly-events-link">
 				<span class="weekly-events-date-day">S</span>
@@ -138,8 +138,11 @@ Weekly calendar section. For the sake of simplicity, extra row has been removed 
 
 .weekly-events {
 	overflow:hidden;
-	max-width:300px;
+	margin-top:-2px;
+	margin-left:-2px;
 }
+
+.weekly-events.style-guide { max-width:300px; }
 
 .weekly-events-date {
 	float:left;
@@ -182,7 +185,7 @@ Weekly calendar section. For the sake of simplicity, extra row has been removed 
 
 .weekly-events-all {
 	float:left;
-	min-width:66%;
+	width:66%;
 }
 
 .weekly-events-all-link {
@@ -193,6 +196,10 @@ Weekly calendar section. For the sake of simplicity, extra row has been removed 
 	padding:33px 45px;
 	border:2px solid white;	
 	font-style:normal;
+	height:14px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
 }
 
 /*
@@ -221,7 +228,7 @@ Title with date and number of events
 .events-overview {
 	overflow:hidden;
 	border-top:1px solid #ececec;
-	margin:20px 0;
+	margin-bottom:20px;
 }
 
 .events-overview-date {
@@ -255,6 +262,7 @@ Title with date and number of events
 .events-overview-title h2 {
 	font-weight:100;
 	text-transform:none;
+	font-size:1.75em;
 }
 
 .events-overview-title p {
