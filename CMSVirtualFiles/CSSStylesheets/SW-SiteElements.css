@@ -99,9 +99,101 @@ being used on home page banner
 /*
 ## Weekly Calendar
 
-Weekly calendar section
+Weekly calendar section. For the sake of simplicity, extra row has been removed from the example markup below.
+
+```
+	<div class="weekly-events">
+		<div class="weekly-events-date">
+			<span class="weekly-events-link">
+				<span class="weekly-events-date-day">S</span>
+				<span class="weekly-events-date-text">07</span>
+			</span>
+		</div>
+		<div class="weekly-events-date">
+			<a href="#" class="weekly-events-link weekly-events-link--has-event">
+				<span class="weekly-events-date-day">M</span>
+				<span class="weekly-events-date-text">08</span>
+			</a>
+		</div>
+		<div class="weekly-events-date">
+			<a href="#" class="weekly-events-link">
+				<span class="weekly-events-date-day">F</span>
+				<span class="weekly-events-date-text">12</span>
+			</a>
+		</div>
+		<div class="weekly-events-date">
+			<a href="#" class="weekly-events-link weekly-events-link--has-event">
+				<span class="weekly-events-date-day">S</span>
+				<span class="weekly-events-date-text">13</span>
+			</a>
+		</div>
+		<div class="weekly-events-all">
+			<a href="#" class="weekly-events-all-link">
+				See all Events
+			</a>
+		</div>
+	</div>
+```
 */
 
+.weekly-events {
+	overflow:hidden;
+	max-width:300px;
+}
+
+.weekly-events-date {
+	float:left;
+	min-width:33%;
+}
+
+.weekly-events-link {
+	display:block;
+	padding:10px;
+	border:2px solid white;	
+	background:#ededed;
+	color:#b0b0b0;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:uppercase; 
+	min-height:60px;
+	transition: .2s ease;
+}
+
+.weekly-events-link--has-event:hover {
+	background:#fcd206;
+}
+
+.weekly-events-date-day {
+	display:block;
+	font-size:12px;
+}
+
+.weekly-events-date-text {
+	font-size:30px;
+	display:block;
+	text-align:center;
+	font-weight:normal;
+	margin-top:5px;
+}
+
+.weekly-events-link--has-event .weekly-events-date-text {
+	color:black;
+}
+
+.weekly-events-all {
+	float:left;
+	min-width:66%;
+}
+
+.weekly-events-all-link {
+	background:#bababa;
+	text-transform:uppercase;
+	color:black;
+	display:block;
+	padding:33px 45px;
+	border:2px solid white;	
+	font-style:normal;
+}
 
 /*
 ## Monthly Calendar
@@ -114,21 +206,122 @@ Monthly calendar section
 ## Events Overview Title
 
 Title with date and number of events
+
+```
+	<div class="events-overview">
+		<div class="events-overview-date">10</div>
+		<div class="events-overview-title">
+			<h2 class="fixie"></h2>
+			<p>3 Events today</p>
+		</div>
+	</div>
+```
 */
 
+.events-overview {
+	overflow:hidden;
+	border-top:1px solid #ececec;
+	margin:20px 0;
+}
+
+.events-overview-date {
+	background:#fcd206;
+	font-weight:bold;
+	font-size:25px;
+	padding:15px 5px 10px;
+	position:relative;
+	float:left;
+	width:30px;
+	margin-bottom:20px;
+}
+
+.events-overview-date:after {
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:0;
+	top:100%;
+	border:10px solid green;
+	border-width:10px 20px;
+	border-color:#fcd206 #fcd206 transparent #fcd206;
+}
+
+.events-overview-title {
+	margin-left:40px;
+	padding-left:15px;
+	padding-top:10px;
+}
+
+.events-overview-title h2 {
+	font-weight:100;
+	text-transform:none;
+}
+
+.events-overview-title p {
+	margin:0;
+	text-transform:uppercase;
+}
 
 /*
 ## Event Item
 
-Basic title and read more
+Basic title and a link to details page. ```h4``` goes ellipsis on smaller screens
+
+```
+	<div class="event-items">
+		<div class="event-item">
+			<div class="event-item-content">
+				<h4 class="event-item-title fixie"></h4>
+				<p class="fixie"></p>
+			</div>
+			<a href="#" class="event-item-link">See details</a>
+		</div>
+		<div class="event-item">
+			<div class="event-item-content">
+				<h4 class="event-item-title fixie"></h4>
+			</div>
+			<a href="#" class="event-item-link">See details</a>
+		</div>
+	</div>
+```
 */
 
+.event-item {
+	border-top:1px solid #d9d9d9;
+	padding:5px 0;
+	overflow:hidden;
+	position:relative;
+}
 
-/*
-## Event Item - Upcomming
+.event-item:last-child {
+	border-bottom:1px solid #d9d9d9;
+}
 
-Upcomming event with short description
-*/
+.event-item-content {
+	margin-right:100px;
+}
+
+.event-item-link {
+	display:block;
+	text-transform:uppercase;
+	color:black;
+	font-style:normal;
+	position:absolute;
+	right:0;
+	bottom:5px;
+}
+
+.event-item-title {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-weight:normal;
+}
+
+.event-item-content p {
+	margin-top:5px;
+	margin-bottom:0;
+}
 
 
 /*
