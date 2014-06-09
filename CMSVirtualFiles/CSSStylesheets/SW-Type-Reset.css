@@ -368,6 +368,34 @@ section title as last child has no bottom margin, which can also be specified by
 	font-size:9px;
 }
 
+/*
+## Header Section
+
+used on SW.ContactUs template
+
+```
+<div class="header-section">
+	<h2 class="fixie"></h2>
+	<h3 class="fixie"></h3>
+</div>
+```
+*/
+
+
+/*
+## Page Header
+
+used on SW.NewsDetails template
+
+```
+<div class="Page-Header">
+	<h2 class="fixie"></h2>
+	<p class="fixie"></p>
+</div>
+```
+*/
+
+
 @media print {
 	* {
 	background: transparent !important;
