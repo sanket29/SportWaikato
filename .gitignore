@@ -238,6 +238,11 @@ CMSVirtualFiles/Templates/Shared/*
 
 
 CMSVirtualFiles/Transformations/*
+!CMSVirtualFiles/Transformations/SW.*/
+CMSVirtualFiles/Transformations/SW.*/RSSItem.ascx
+CMSVirtualFiles/Transformations/SW.*/Preview.ascx
+CMSVirtualFiles/Transformations/SW.*/Default.ascx
+CMSVirtualFiles/Transformations/SW.*/AtomItem.ascx
 
 !SW-Styleguide/
 
